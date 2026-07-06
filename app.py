@@ -415,15 +415,7 @@ def reset_cache():
     liked_cache.clear()
     return jsonify({"message": "Cache cleared", "credit": "@minister_69"})
 
-if __name__ == '__main__':
-    print("🚀 Server started - Smart Like System!")
-    print("📁 Account files:")
-    print("   - account_ind.txt (IND server)")
-    print("   - account_br.txt (BR/US/SAC/NA servers)")
-    print("   - account_bd.txt (BD/RU server)")
-    print("🧠 Smart feature: Tracks which accounts already liked")
-    print("⚡ Only fresh accounts will send likes")
-    app.run(host='0.0.0.0', port=5001, debug=True, use_reloader=False)
-# MINISTER LIKE API SRC UID PASSWORD 
-# POWERED BY : @minister_69
-# CHANNEL : @minister_6T9
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
